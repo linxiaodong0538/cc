@@ -1,7 +1,9 @@
 <template>
   <div class="p-login">
     <div class="pb-logo"></div>
-    <Padding size="lg" :dirs="[ 'left', 'right' ]">
+    <Padding
+      size="lg"
+      :dirs="[ 'left', 'right' ]">
       <input
         class="c-input fs6"
         type="text"
