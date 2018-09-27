@@ -22,7 +22,7 @@
     "iview": "^2.13.0",
     "kindeditor": "^4.1.10",
     "qrcode": "^1.2.2",
-    "sass-utils": "^1.0.10",
+    "sass-utils": "^1.0.20",
     "vant": "^1.1.16",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
