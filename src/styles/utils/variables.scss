@@ -1,31 +1,5 @@
 // 字体
-$font-sizes: (
-  fs22: px2rpx(22px),
-  fs24: px2rpx(24px),
-  fs26: px2rpx(26px),
-  fs28: px2rpx(28px),
-  fs30: px2rpx(30px),
-  fs32: px2rpx(32px),
-  fs34: px2rpx(34px),
-  fs36: px2rpx(36px),
-  fs38: px2rpx(38px),
-  fs40: px2rpx(40px),
-);
+$font-sizes: ();
 
 // 颜色
-$colors: (
-  c1: #FFFFFF,
-  c2: #FED02F,
-  c3: #333333,
-  c4: #E5E5E5,
-  c5: #999999,
-  c6: #f6f6f6,
-  c7: #666666,
-  c8: #000000
-);
-
-// 图片 CDN
-$cdn: "http://localhost:88/";
-
-// 静态资源版本号
-$version: 0.1;
+$colors: ();

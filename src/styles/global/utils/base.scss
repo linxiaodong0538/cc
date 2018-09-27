@@ -2,10 +2,6 @@
   .#{$key} {
     font-size: $value;
   }
-
-  .u-lh-#{$key} {
-    line-height: $value;
-  }
 }
 
 @each $key, $value in $colors {
@@ -13,11 +9,11 @@
     color: $value;
   }
 
-  .u-bg-#{$key} {
+  .bg-#{$key} {
     background-color: $value;
   }
 
-  .u-bd-#{$key} {
+  .bd-#{$key} {
     border: 1px solid $value;
   }
 }
