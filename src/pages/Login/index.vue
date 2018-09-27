@@ -67,7 +67,7 @@
 
         this.$toast('登入成功')
 
-        this.$router.push(helpers.getDefaultPage())
+        // this.$router.push(helpers.getDefaultPage())
       }
     }
   }
