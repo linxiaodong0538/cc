@@ -1,52 +1,10 @@
 <template>
-  <div class="full-page">
-    <van-nav-bar title="忘记密码" left-arrow @click-left="$router.push('/login')" />
-    <div class="password">
-      <van-cell-group>
-        <van-field
-          v-model="formValidate.telephone"
-          type="tel"
-          label="账号"
-          placeholder="请输入手机号"
-          required
-          clearable
-        />
-        <van-field
-          v-model="formValidate.password"
-          type="password"
-          label="新密码"
-          placeholder="请输入新密码"
-          required
-          clearable
-        />
-        <van-field
-          v-model="formValidate.check_code"
-          label="短信验证码"
-          placeholder="请输入短信验证码"
-          required
-          clearable
-        >
-          <van-button slot="button" size="small" :disabled="checkCode.got"
-                      @click="handleGetCheckCode">
-            {{ checkCode.tip }}
-          </van-button>
-        </van-field>
-      </van-cell-group>
-      <Padding>
-        <van-button type="primary" size="large" @click="handleConfirm">确认修改</van-button>
-      </Padding>
-    </div>
-  </div>
+  <div class="password"></div>
 </template>
 
 <script>
-  import Padding from '@/components/Padding'
-
   export default {
     name: 'login',
-    components: {
-      Padding
-    },
     data () {
       return {
         formValidate: {},
