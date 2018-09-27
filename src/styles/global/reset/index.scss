@@ -1,2 +1,5 @@
+@import "~minireset.css/minireset";
+
 body {
+  color: map-get($colors, c4);
 }

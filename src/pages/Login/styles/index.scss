@@ -1,15 +1,24 @@
 @import "../../../styles/utils/index";
 
-.login {
-  @include position--absolute(50%, 0, null, 0);
+@include p(login) {
+  @include pb(logo) {
+    @include size(100%, px2rem(514px));
 
-  transform: translateY(-50%);
+    margin-top: px2rem(52px * 2);
+    background: {
+      image: url("./images/logo.png");
+      size: 100% 100%;
+    }
+  }
 
-  .logo {
-    @include size(200px, 200px);
-    @include block--center;
+  @include pb(forget-password) {
+    @include padding(px2rem(15px), null, px2rem(15px));
 
-    display: block;
-    margin-bottom: 15px;
+    display: inline-block;
+    line-height: 100%;
+  }
+
+  @include pb(button) {
+    margin-top: px2rem(70px * 2);
   }
 }

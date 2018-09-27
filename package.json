@@ -14,6 +14,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "amfe-flexible": "^2.2.1",
     "apples": "^0.0.3",
     "array-to-tree": "^2.2.1",
     "axios": "^0.17.1",
@@ -21,6 +22,7 @@
     "dayjs": "^1.7.4",
     "iview": "^2.13.0",
     "kindeditor": "^4.1.10",
+    "minireset.css": "0.0.3",
     "qrcode": "^1.2.2",
     "sass-utils": "^1.0.20",
     "vant": "^1.1.16",

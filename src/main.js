@@ -6,6 +6,7 @@ import router from './router'
 import store from '@/store'
 import globalPlugin from '@/utils/plugins/global'
 import '@/utils/init'
+import 'amfe-flexible'
 import '@/styles/global/index.scss'
 
 Vue.config.productionTip = false

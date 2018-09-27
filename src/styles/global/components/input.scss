@@ -1,0 +1,12 @@
+@include c(input) {
+  @include text--middle(px2rem(72px * 2));
+
+  width: 100%;
+  display: block;
+  border: 0;
+  border-bottom: 1px solid map-get($colors, c2);
+
+  &::placeholder {
+    color: map-get($colors, c3);
+  }
+}

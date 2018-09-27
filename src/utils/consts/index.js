@@ -1,12 +1,3 @@
-import MENUS from './menus'
-import ROLES from './roles'
-import ALIASES from './aliases'
-import GENDERS from './genders'
-import EDUCATION_DEGREES from './educationDegrees'
-import NURSING_GRADES from './nursingGrades'
-import NOTICE_COLUMNS from './noticeColumns'
-import PERMISSIONS from './permissions'
-
 // 当前 host
 const HOST = window.location.host
 
@@ -32,14 +23,6 @@ const PAGE_SIZE = 10
 const TITLE = '网站后台'
 
 export default {
-  MENUS,
-  ROLES,
-  ALIASES,
-  GENDERS,
-  EDUCATION_DEGREES,
-  NURSING_GRADES,
-  NOTICE_COLUMNS,
-  PERMISSIONS,
   BASE_URL,
   API_URL,
   PAGE_SIZE,

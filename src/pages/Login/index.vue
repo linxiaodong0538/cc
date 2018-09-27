@@ -1,12 +1,29 @@
 <template>
-  <div class="full-page">
-    full page
+  <div class="p-login">
+    <div class="pb-logo"></div>
+    <Padding size="lg" :dirs="[ 'left', 'right' ]">
+      <input
+        class="c-input fs6"
+        type="text"
+        placeholder="请输入手机号" />
+      <input
+        class="c-input fs6"
+        type="text"
+        placeholder="请输入密码" />
+      <span class="pb-forget-password c5 fs4">忘记密码</span>
+      <div class="pb-button c-button c-button--1 c1 fs6">登入</div>
+    </Padding>
   </div>
 </template>
 
 <script>
+  import Padding from '@/components/Padding'
+
   export default {
     name: 'login',
+    components: {
+      Padding
+    },
     data () {
       return {
         formValidate: {}
