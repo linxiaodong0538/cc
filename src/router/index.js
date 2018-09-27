@@ -21,13 +21,7 @@ const router = new Router({
           path: '/',
           component: Layout,
           children: [
-            home,
-            products,
-            cars,
-            staffs,
-            olds,
-            families,
-            notices
+            home
           ],
           meta: {
             requiresAuth: true
