@@ -3,11 +3,14 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import '@/utils/init'
 import store from '@/store'
+import globalPlugin from '@/utils/plugins/global'
+import '@/utils/init'
 import '@/styles/global/index.scss'
 
 Vue.config.productionTip = false
+
+Vue.use(globalPlugin)
 
 /* eslint-disable no-new */
 new Vue({

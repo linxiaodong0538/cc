@@ -44,7 +44,7 @@
           }
         })
 
-        auth.login(postStaffActionRes.data)
+        this.auth.login(postStaffActionRes.data)
 
         this.$toast('登入成功')
 
