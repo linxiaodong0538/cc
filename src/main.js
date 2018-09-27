@@ -7,13 +7,7 @@ import '@/utils/init'
 import store from '@/store'
 import '@/styles/global/index.scss'
 
-import Vant from 'vant'
-import 'vant/lib/vant-css/index.css'
-import '@/styles/vant/index.scss'
-
 Vue.config.productionTip = false
-
-Vue.use(Vant)
 
 /* eslint-disable no-new */
 new Vue({
