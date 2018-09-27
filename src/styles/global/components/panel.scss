@@ -1,0 +1,35 @@
+@include c(panel) {
+  position: relative;
+  background-color: map-get($colors, c1);
+  margin-bottom: px2rpx(14px);
+
+  @include e(head) {
+    @include text--middle(px2rpx(100px));
+    @include margin(null, px2rpx(30px), null, px2rpx(30px));
+
+    position: relative;
+
+    @include m(underline) {
+      border-bottom: px2rpx(1px) dotted map-get($colors, c4);
+    }
+  }
+
+  @include e(title) {
+    display: inline-block;
+    line-height: px2rpx(5px);
+    border-bottom: px2rpx(18px) solid map-get($colors, c2);
+  }
+
+  @include e(more) {
+    right: 0;
+    display: inline-block;
+    padding: px2rpx(30px);
+
+    background: {
+      image: image-url("commons/more.png");
+      size: px2rpx(10px) px2rpx(20px);
+      repeat: no-repeat;
+      position: right center;
+    }
+  }
+}

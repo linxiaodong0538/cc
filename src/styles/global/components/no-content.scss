@@ -1,0 +1,14 @@
+@include c(no-content) {
+  @include block--center;
+
+  margin-top: px2rpx(257px);
+  padding-top: px2rpx(333px + 63px);
+  width: px2rpx(519px);
+  line-height: 100%;
+  text-align: center;
+  background: {
+    image: image-url("components/no-content/bg.png");
+    size: 100% px2rpx(333px);
+    repeat: no-repeat;
+  }
+}

@@ -1,4 +1,22 @@
 @import "../utils/index";
-@import "reset";
-@import "./fonts";
-@import "./classes/index";
+@import "./components/button";
+@import "./components/panel";
+@import "./components/tabs";
+@import "./components/icon";
+@import "./components/lists/list";
+@import "./components/lists/list-1";
+@import "./components/lists/list-2";
+@import "./components/tag";
+@import "./components/no-content";
+@import "./components/banner";
+@import "./components/avatar";
+@import "./objects/grid";
+@import "./objects/media";
+@import "./objects/box";
+@import "./utils/base";
+
+page {
+  box-sizing: border-box;
+  font-family: $font-family-mobile;
+  background-color: map-get($colors, c6);
+}

@@ -1,0 +1,26 @@
+@include c(avatar) {
+  position: relative;
+
+  @include e(image) {
+    display: block;
+  }
+
+  @include e(text) {
+    @include position--absolute(50%);
+
+    transform: translateY(-50%);
+  }
+
+  // 1
+  @include m(1) {
+    @include c(avatar) {
+      @include e(image) {
+        @include circle(px2rpx(80px));
+      }
+
+      @include e(text) {
+        left: px2rpx(80px + 21px);
+      }
+    }
+  }
+}

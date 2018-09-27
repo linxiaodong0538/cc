@@ -1,0 +1,25 @@
+@include c(button) {
+  display: inline-block;
+  text-align: center;
+
+  // 1
+  @include m(1) {
+    @include text--middle(px2rpx(80px));
+
+    width: px2rpx(330px);
+    background-color: map-get($colors, c2);
+    color: map-get($colors, c3);
+    font-size: map-get($font-sizes, fs32);
+    border-radius: px2rpx(6px);
+
+    @include e(wrap) {
+      .is-left {
+        margin-right: px2rpx(15px);
+      }
+
+      .is-right {
+        margin-left: px2rpx(15px);
+      }
+    }
+  }
+}

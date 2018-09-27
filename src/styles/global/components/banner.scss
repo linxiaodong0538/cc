@@ -1,0 +1,26 @@
+@include c(banner) {
+  @include size(100%, px2rpx(400px));
+
+  position: relative;
+
+  @include e(image) {
+    @include size(100%, 100%);
+
+    display: block;
+  }
+
+  @include e(overlay) {
+    @include position--absolute(0, 0, 0, 0);
+
+    background-color: map-get($colors, c8);
+    opacity: .3;
+  }
+
+  @include e(text) {
+    @include position--absolute(50%, null, null, 0);
+
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+  }
+}
