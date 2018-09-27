@@ -1,9 +1,3 @@
-@each $key, $value in $font-sizes {
-  .#{$key} {
-    font-size: $value;
-  }
-}
-
 @each $key, $value in $colors {
   .#{$key} {
     color: $value;
