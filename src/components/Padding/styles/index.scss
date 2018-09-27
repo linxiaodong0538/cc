@@ -1,0 +1,55 @@
+$sm: 5px;
+$md: 15px;
+$lg: 25px;
+
+.top {
+  padding-top: $md;
+}
+
+.bottom {
+  padding-bottom: $md;
+}
+
+.left {
+  padding-left: $md;
+}
+
+.right {
+  padding-right: $md;
+}
+
+.sm {
+  &.top {
+    padding-top: $sm;
+  }
+
+  &.bottom {
+    padding-bottom: $sm;
+  }
+
+  &.left {
+    padding-left: $sm;
+  }
+
+  &.right {
+    padding-right: $sm;
+  }
+}
+
+.lg {
+  &.top {
+    padding-top: $lg;
+  }
+
+  &.bottom {
+    padding-bottom: $lg;
+  }
+
+  &.left {
+    padding-left: $lg;
+  }
+
+  &.right {
+    padding-right: $lg;
+  }
+}

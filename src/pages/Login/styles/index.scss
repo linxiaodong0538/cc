@@ -1,0 +1,15 @@
+@import "../../../styles/utils/index";
+
+.login {
+  @include position--absolute(50%, 0, null, 0);
+
+  transform: translateY(-50%);
+
+  .logo {
+    @include size(200px, 200px);
+    @include block--center;
+
+    display: block;
+    margin-bottom: 15px;
+  }
+}
