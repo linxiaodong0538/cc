@@ -7,13 +7,23 @@
       <input
         class="c-input fs6"
         type="text"
-        placeholder="请输入手机号" />
+        placeholder="请输入手机号"
+        v-modal="formValidate.telephone" />
       <input
         class="c-input fs6"
-        type="text"
-        placeholder="请输入密码" />
-      <span class="pb-forget-password c5 fs4">忘记密码</span>
-      <div class="pb-button c-button c-button--1 c1 fs6">登入</div>
+        type="password"
+        placeholder="请输入密码"
+        v-modal="formValidate.password" />
+      <span
+        class="pb-forget-password c5 fs4"
+        @click="$router.push('/password')">
+        忘记密码
+      </span>
+      <div
+        class="pb-button c-button c-button--1 c1 fs6"
+        @click="handleLogin">
+        登入
+      </div>
     </Padding>
   </div>
 </template>
@@ -22,7 +32,6 @@
   import Padding from '@/components/Padding'
 
   export default {
-    name: 'login',
     components: {
       Padding
     },
@@ -33,12 +42,7 @@
     },
     methods: {
       async handleLogin () {
-        const { org, telephone, password } = this.formValidate
-
-        if (!org) {
-          this.$toast('机构不能为空')
-          return
-        }
+        const { telephone, password } = this.formValidate
 
         if (!telephone) {
           this.$toast('手机号不能为空')
@@ -47,11 +51,6 @@
 
         if (!password) {
           this.$toast('密码不能为空')
-          return
-        }
-
-        if (org !== '闽侯重阳养老院') {
-          this.$toast('该机构下不存在此手机号')
           return
         }
 

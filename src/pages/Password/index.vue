@@ -1,10 +1,46 @@
 <template>
-  <div class="password"></div>
+  <div class="p-password">
+    <NavBar title="忘记密码" />
+    <Padding
+      size="lg"
+      :dirs="[ 'left', 'right' ]">
+      <input
+        class="c-input fs6"
+        type="text"
+        placeholder="请输入手机号"
+        v-modal="formValidate.telephone" />
+      <input
+        class="c-input fs6"
+        type="password"
+        placeholder="请输入密码"
+        v-modal="formValidate.password" />
+      <input
+        class="c-input fs6"
+        type="text"
+        placeholder="请输入密码"
+        v-modal="formValidate.password" />
+      <div
+        class="pb-button c-button c-button--1 c1 fs6"
+        @click="handleLogin">
+        确认修改
+      </div>
+    </Padding>
+    <TabBar />
+  </div>
 </template>
 
 <script>
+  import NavBar from '@/components/NavBar'
+  import Padding from '@/components/Padding'
+  import TabBar from '@/components/TabBar'
+
   export default {
     name: 'login',
+    components: {
+      NavBar,
+      Padding,
+      TabBar
+    },
     data () {
       return {
         formValidate: {},

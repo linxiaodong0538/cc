@@ -1,0 +1,16 @@
+@import "../../../utils/index";
+
+@include c(icon) {
+  display: inline-block;
+  background: {
+    size: 100% 100%;
+    repeat: no-repeat;
+    position: center center;
+  }
+
+  @include m(extend) {
+    @include size(px2rem(28px), px2rem(24px));
+
+    background-image: url("./images/extend.png");
+  }
+}

@@ -1,0 +1,68 @@
+@import "../../../styles/utils/index";
+
+@include c(tab-bar) {
+  @include position--fixed(null, null, 0, 0);
+  @include size(100%, px2rem(96px));
+
+  display: flex;
+  align-items: center;
+  background-color: rgba(248, 248, 248, 0.82);
+  border-top: 1px solid map-get($colors, c2);
+
+  @include e(item) {
+    flex: 1;
+    position: relative;
+    text-align: center;
+
+    @include c(icon) {
+      vertical-align: middle;
+    }
+  }
+
+  @include e(middle) {
+    @include position--absolute(50%, null, null, 50%);
+    @include size(px2rem(100px), px2rem(88px));
+
+    transform: translate(-50%, -50%);
+    background: {
+      image: url("./images/middle-bg.png");
+      size: 100% 100%;
+    }
+    line-height: 120%;
+    text-align: center;
+    font-weight: bold;
+    box-sizing: border-box;
+  }
+
+  @include e(middle-text) {
+    @include position--absolute(50%, null, null, 50%);
+
+    transform: translate(-50%, -50%);
+    width: px2rem(100px);
+  }
+
+  @include cc(drop) {
+    @include position--absolute(px2rem(-180px), null, null, px2rem(20px * 2));
+    @include size(px2rem(196px), px2rem(176px));
+
+    background: {
+      image: url("./images/drop-bg.png");
+      size: 100% 100%;
+    }
+
+    @include e(item) {
+      @include text--middle(px2rem(42px * 2));
+
+      text-align: center;
+      color: map-get($colors, c4);
+
+      @include s(is-first) {
+        border-bottom: 1px solid map-get($colors, c2);
+      }
+      
+      @include s(is-active) {
+        color: map-get($colors, c5);
+      }
+    }
+  }
+}

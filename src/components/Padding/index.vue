@@ -22,5 +22,4 @@
   }
 </script>
 
-<style lang="scss" scoped src="./styles/index.scss">
-</style>
+<style lang="scss" scoped src="./styles/index.scss"></style>

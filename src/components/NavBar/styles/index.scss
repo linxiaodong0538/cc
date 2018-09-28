@@ -1,0 +1,24 @@
+@import "../../../styles/utils/index";
+
+@include c(nav-bar) {
+  @include text--middle(px2rem(45px * 2));
+
+  position: relative;
+  width: 100%;
+  background-color: map-get($colors, c5);
+
+  @include e(back) {
+    @include position--absolute(50%, null, null, px2rem(20px));
+    @include size(px2rem(22px), px2rem(36px));
+
+    transform: translateY(-50%);
+    background: {
+      image: url("./images/back.png");
+      size: 100% 100%;
+    }
+  }
+
+  @include e(title) {
+    text-align: center;
+  }
+}

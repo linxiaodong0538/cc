@@ -1,15 +1,7 @@
 @import "../../../styles/utils/index";
 
-.password {
-  @include position--absolute(50%, 0, null, 0);
-
-  transform: translateY(-50%);
-
-  .logo {
-    @include size(200px, 200px);
-    @include block--center;
-
-    display: block;
-    margin-bottom: 15px;
+@include p(password) {
+  @include pb(button) {
+    margin-top: px2rem(250px * 2);
   }
 }
