@@ -8,12 +8,12 @@
         class="c-input fs6"
         type="text"
         placeholder="请输入手机号"
-        v-modal="formValidate.telephone" />
+        v-model="formValidate.telephone" />
       <input
         class="c-input fs6"
         type="password"
         placeholder="请输入密码"
-        v-modal="formValidate.password" />
+        v-model="formValidate.password" />
       <span
         class="pb-forget-password c5 fs4"
         @click="$router.push('/password')">
@@ -62,11 +62,9 @@
           }
         })
 
-        this.auth.login(postStaffActionRes.data)
-
+        this.$auth.login(postStaffActionRes.data)
         this.$toast('登入成功')
-
-        // this.$router.push(helpers.getDefaultPage())
+        this.$router.push('/')
       }
     }
   }

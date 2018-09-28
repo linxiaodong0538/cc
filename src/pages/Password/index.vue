@@ -17,15 +17,18 @@
       <input
         class="c-input fs6"
         type="text"
-        placeholder="请输入密码"
-        v-modal="formValidate.password" />
+        placeholder="请输入短信验证码"
+        v-modal="formValidate.check_code" />
       <div
         class="pb-button c-button c-button--1 c1 fs6"
-        @click="handleLogin">
+        @click="handleConfirm">
         确认修改
       </div>
     </Padding>
     <TabBar />
+    <Toast
+      ref="toast"
+      :message="Toast.message" />
   </div>
 </template>
 
@@ -33,13 +36,15 @@
   import NavBar from '@/components/NavBar'
   import Padding from '@/components/Padding'
   import TabBar from '@/components/TabBar'
+  import Toast from '@/components/Toast'
 
   export default {
     name: 'login',
     components: {
       NavBar,
       Padding,
-      TabBar
+      TabBar,
+      Toast
     },
     data () {
       return {
@@ -47,10 +52,17 @@
         checkCode: {
           tip: '获取短信验证码',
           got: false
+        },
+        Toast: {
+          message: ''
         }
       }
     },
     methods: {
+      toast (message) {
+        this.Toast.message = message
+        this.$refs.toast.show()
+      },
       async getCheckCode (telephone) {
         const postStaffActionRes = await this.$store.dispatch('postStaffAction', {
           body: {
@@ -93,6 +105,7 @@
         }, 1000)
       },
       async handleConfirm () {
+        this.toast('abc')
         const { telephone, password, check_code } = this.formValidate
 
         if (!telephone) {

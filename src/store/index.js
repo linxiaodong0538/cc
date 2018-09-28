@@ -8,6 +8,7 @@ import products from './modules/products'
 import productStocks from './modules/productStocks'
 import olds from './modules/olds'
 import families from './modules/families'
+import staffs from './modules/staffs'
 import settings from './modules/settings'
 import relations from './modules/relations'
 
@@ -26,6 +27,7 @@ export default new Vuex.Store({
     productStocks,
     olds,
     families,
+    staffs,
     settings,
     relations
   }

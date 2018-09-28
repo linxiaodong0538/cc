@@ -1,5 +1,6 @@
 import REST from 'apples/libs/REST'
 import restHelpers from './helpers/restHelpers'
+import toast from '@/components/Toast'
 
 export default class extends REST {
   /**
@@ -28,7 +29,7 @@ export default class extends REST {
         })
         .catch(res => {
           // 全局错误提示
-          // Toast(res.response.data.error.message)
+          toast(res.response.data.error.message)
         })
     })
   }
