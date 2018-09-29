@@ -50,6 +50,7 @@
       handleSelectDrop (index) {
         this.cDrop.current = index
         this.cDrop.visible = false
+        this.$router.push('/olds/trends')
       }
     },
     mounted () {

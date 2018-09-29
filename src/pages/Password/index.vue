@@ -1,6 +1,8 @@
 <template>
   <div class="p-password">
-    <NavBar title="忘记密码" />
+    <NavBar
+      title="忘记密码"
+      back />
     <Padding
       size="lg"
       :dirs="[ 'left', 'right' ]">
