@@ -1,7 +1,7 @@
 @import "../../../styles/utils/index";
 
 @include c(tab-bar) {
-  @include position--fixed(null, null, 0, 0);
+  @include position--absolute(null, null, 0, 0);
   @include size(100%, px2rem(96px));
 
   display: flex;
@@ -59,7 +59,7 @@
       @include s(is-first) {
         border-bottom: 1px solid map-get($colors, c2);
       }
-      
+
       @include s(is-active) {
         color: map-get($colors, c5);
       }

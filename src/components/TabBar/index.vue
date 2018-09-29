@@ -6,14 +6,20 @@
       <div class="c-icon c-icon--extend"></div>
       赵老人
     </div>
-    <div class="c-tab-bar__item">
+    <div
+      class="c-tab-bar__item"
+      @click="$router.push('/')">
       <div class="c-tab-bar__middle c1 fs3">
         <div class="c-tab-bar__middle-text">
           重阳<br />画映
         </div>
       </div>
     </div>
-    <div class="c-tab-bar__item c5 fs5">我的</div>
+    <div
+      class="c-tab-bar__item c5 fs5"
+      @click="$router.push('/my/home')">
+      我的
+    </div>
     <div
       v-show="cDrop.visible"
       class="cc-drop fs5">
