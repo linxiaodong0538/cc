@@ -8,7 +8,7 @@
         </div>
         <div class="pb-button pb-button--comment">
           <div class="pb-button__num c4 fs2">88</div>
-          <div class="pb-button__text c1 fs2">点赞</div>
+          <div class="pb-button__text c1 fs2">评论</div>
         </div>
         <div class="pb-title c1 fs10">世界上最美的十大海岛排行榜，带您领略惊世之美</div>
         <div class="pb-address c1 fs2">福州 · 闽侯重阳养老院</div>

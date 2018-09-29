@@ -1,0 +1,27 @@
+@import "../../../utils/index";
+
+@include c(message-list) {
+  padding-bottom: px2rem(10px * 2);
+
+  @include e(item) {
+    @include margin(px2rem(10px * 2), px2rem(10px * 2), null, px2rem(10px * 2));
+
+    padding: px2rem(12px * 2);
+    border-radius: px2rem(6px * 2);
+    background-color: map-get($colors, c1);
+    overflow: hidden;
+  }
+
+  @include e(body, time) {
+    line-height: 100%;
+  }
+
+  @include e(body) {
+    padding-bottom: px2rem(12px * 2);
+    line-height: 150%;
+  }
+
+  @include e(time) {
+    text-align: right;
+  }
+}

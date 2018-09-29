@@ -7,7 +7,11 @@
         <div class="pb-name__relation c8 fs6">父子关系</div>
       </div>
       <ul class="c-list fs8">
-        <li class="c-list__item">我的消息</li>
+        <li
+          class="c-list__item"
+          @click="$router.push('/my/messages')">
+          我的消息
+        </li>
         <li class="c-list__item">我的评论</li>
         <li class="c-list__item">意见反馈</li>
         <li class="c-list__item">联系我们</li>
