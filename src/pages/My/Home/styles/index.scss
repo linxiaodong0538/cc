@@ -1,5 +1,20 @@
 @import "../../../../styles/utils/index";
 
 @include p(my-home) {
+  background-color: map-get($colors, c6);
 
+  @include pb(name) {
+    @include text--middle(px2rem(60px * 2));
+
+    background-color: map-get($colors, c1);
+    position: relative;
+    text-indent: px2rem(20px * 2);
+
+    @include e(relation) {
+      @include position--absolute(50%, px2rem(20px * 2));
+
+      transform: translateY(-50%);
+      line-height: 100%;
+    }
+  }
 }

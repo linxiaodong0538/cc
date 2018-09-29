@@ -9,6 +9,7 @@ import login from './routes/login'
 import password from './routes/password'
 import logout from './routes/logout'
 import olds from './routes/olds'
+import my from './routes/my'
 
 Vue.use(Router)
 
@@ -23,7 +24,8 @@ const router = new Router({
           component: Layout,
           children: [
             home,
-            olds
+            olds,
+            my
           ],
           meta: {
             requiresAuth: true
