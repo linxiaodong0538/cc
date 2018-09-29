@@ -25,10 +25,6 @@
         确认修改
       </div>
     </Padding>
-    <TabBar />
-    <Toast
-      ref="toast"
-      :message="Toast.message" />
   </div>
 </template>
 

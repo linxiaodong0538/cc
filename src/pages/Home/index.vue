@@ -1,9 +1,17 @@
 <template>
-  <div></div>
+  <div class="p-home">
+    <TabBar />
+  </div>
 </template>
 
 <script>
+  import TabBar from '@/components/TabBar'
+
   export default {
-    name: 'home'
+    components: {
+      TabBar
+    }
   }
 </script>
+
+<style lang="scss" src="./styles/index.scss"></style>
