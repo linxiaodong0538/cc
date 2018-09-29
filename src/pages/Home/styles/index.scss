@@ -1,12 +1,10 @@
 @import "../../../styles/utils/index";
 
 @include p(home) {
-  @include position--absolute(0, 0, 0, 0);
-
   background-color: #e5e5e5;
 
   @include pb(demo) {
-    @include position--absolute(0, 0, px2rem(96px), 0);
+    @include size(100%, 100%);
 
     background: {
       image: url("./images/bg.png");

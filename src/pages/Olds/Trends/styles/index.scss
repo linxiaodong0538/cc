@@ -1,8 +1,6 @@
 @import "../../../../styles/utils/index";
 
 @include p(olds-trends) {
-  background-color: map-get($colors, c6);
-
   @include pb(card) {
     padding: px2rem(15px * 2);
     position: relative;

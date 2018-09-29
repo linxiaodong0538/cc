@@ -11,6 +11,6 @@
   @include m(extend) {
     @include size(px2rem(28px), px2rem(24px));
 
-    background-image: url("/images/extend.png");
+    background-image: url("./images/extend.png");
   }
 }
