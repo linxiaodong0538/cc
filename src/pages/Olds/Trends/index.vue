@@ -1,5 +1,6 @@
 <template>
   <div class="p-olds-trends">
+    健康动态
   </div>
 </template>
 
