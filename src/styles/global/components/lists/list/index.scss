@@ -1,6 +1,18 @@
 @import "../../../../utils/index";
 
 @include c(list) {
+  padding-left: px2rem(20px * 2);
+  background-color: map-get($colors, c1);
+
   @include e(item) {
+    @include text--middle(px2rem(56px * 2));
+
+    background: {
+      image: url("./images/is-link.png");
+      size: px2rem(20px) px2rem(32px);
+      repeat: no-repeat;
+      position: right px2rem(20px * 2) center;
+    }
+    border-bottom: 1px solid map-get($colors, c2);
   }
 }

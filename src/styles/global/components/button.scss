@@ -11,4 +11,10 @@
     border-radius: px2rem(45px);
     background-color: map-get($colors, c5);
   }
+
+  @include m(2) {
+    @include text--middle(px2rem(45px * 2));
+
+    border-radius: px2rem(45px);
+  }
 }

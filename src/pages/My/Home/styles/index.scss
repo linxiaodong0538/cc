@@ -9,6 +9,7 @@
     background-color: map-get($colors, c1);
     position: relative;
     text-indent: px2rem(20px * 2);
+    margin-bottom: px2rem(6px * 2);
 
     @include e(relation) {
       @include position--absolute(50%, px2rem(20px * 2));
@@ -16,5 +17,12 @@
       transform: translateY(-50%);
       line-height: 100%;
     }
+  }
+
+  @include pb(button) {
+    @include block--center;
+
+    margin-top: px2rem(180px * 2);
+    width: px2rem(315px * 2);
   }
 }
