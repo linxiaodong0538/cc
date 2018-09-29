@@ -1,5 +1,5 @@
 <template>
-  <div :class="[size, ...dirs]">
+  <div class="c-padding" :class="[size, ...dirs]">
     <slot></slot>
   </div>
 </template>

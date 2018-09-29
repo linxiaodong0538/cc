@@ -8,17 +8,25 @@
         class="c-input fs6"
         type="text"
         placeholder="请输入手机号"
-        v-modal="formValidate.telephone" />
+        v-model="formValidate.telephone" />
       <input
         class="c-input fs6"
         type="password"
         placeholder="请输入密码"
-        v-modal="formValidate.password" />
-      <input
-        class="c-input fs6"
-        type="text"
-        placeholder="请输入短信验证码"
-        v-modal="formValidate.check_code" />
+        v-model="formValidate.password" />
+      <div class="pb-check-code">
+        <input
+          class="c-input fs6"
+          type="text"
+          placeholder="请输入短信验证码"
+          v-model="formValidate.check_code" />
+        <div
+          class="pb-check-code__tip fs4"
+          :class="[ checkCode.got ? ' c3': ' c5' ]"
+          @click="handleGetCheckCode">
+          {{ checkCode.tip }}
+        </div>
+      </div>
       <div
         class="pb-button c-button c-button--1 c1 fs6"
         @click="handleConfirm">
@@ -55,10 +63,6 @@
       }
     },
     methods: {
-      toast (message) {
-        this.Toast.message = message
-        this.$refs.toast.show()
-      },
       async getCheckCode (telephone) {
         const postStaffActionRes = await this.$store.dispatch('postStaffAction', {
           body: {
@@ -101,7 +105,6 @@
         }, 1000)
       },
       async handleConfirm () {
-        this.toast('abc')
         const { telephone, password, check_code } = this.formValidate
 
         if (!telephone) {
