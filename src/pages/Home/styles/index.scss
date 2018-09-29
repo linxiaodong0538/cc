@@ -4,4 +4,46 @@
   @include position--absolute(0, 0, 0, 0);
 
   background-color: #e5e5e5;
+
+  @include pb(demo) {
+    @include position--absolute(0, 0, px2rem(96px), 0);
+
+    background: {
+      image: url("./images/bg.png");
+      size: 100% 100%;
+    }
+  }
+
+  @include pb(button) {
+    @include position--absolute(null, px2rem(19px * 2));
+
+    width: px2rem(28px * 2);
+    text-align: center;
+    background: {
+      size: px2rem(56px) px2rem(52px);
+      repeat: no-repeat;
+    }
+
+    @include m(praise) {
+      top: px2rem(404px * 2);
+      background-image: url("./images/praise.png");
+    }
+
+    @include m(comment) {
+      top: px2rem((404px + 26px + 36px) * 2);
+      background-image: url("./images/comment.png");
+    }
+
+    @include e(num, text) {
+      line-height: 100%;
+    }
+
+    @include e(num) {
+      padding-top: px2rem(15px);
+    }
+
+    @include e(text) {
+      padding-top: px2rem(24px);
+    }
+  }
 }
