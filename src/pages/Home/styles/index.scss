@@ -24,14 +24,14 @@
       repeat: no-repeat;
     }
 
-    @include m(praise) {
-      top: px2rem(404px * 2);
-      background-image: url("./images/praise.png");
+    @include m(comment) {
+      bottom: px2rem(130px * 2);
+      background-image: url("./images/comment.png");
     }
 
-    @include m(comment) {
-      top: px2rem((404px + 26px + 36px) * 2);
-      background-image: url("./images/comment.png");
+    @include m(praise) {
+      bottom: px2rem((130px + 62px) * 2);
+      background-image: url("./images/praise.png");
     }
 
     @include e(num, text) {
@@ -45,5 +45,26 @@
     @include e(text) {
       padding-top: px2rem(24px);
     }
+  }
+
+  @include pb(title, address, time) {
+    @include position--absolute(null, null, null, px2rem((750px - 335px * 2) / 2));
+    width: px2rem(335px * 2);
+  }
+
+  @include pb(address, time) {
+    opacity: .8;
+  }
+
+  @include pb(time) {
+    bottom: px2rem(20px * 2);
+  }
+
+  @include pb(address) {
+    bottom: px2rem(40px * 2);
+  }
+
+  @include pb(title) {
+    bottom: px2rem(60px * 2);
   }
 }
