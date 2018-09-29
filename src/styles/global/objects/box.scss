@@ -1,3 +1,5 @@
+@import "../../utils/index";
+
 @include o(box) {
   @include padding(null, px2rpx(30px), null, px2rpx(30px));
 

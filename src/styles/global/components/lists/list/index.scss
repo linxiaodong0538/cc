@@ -1,5 +1,6 @@
+@import "../../../../utils/index";
+
 @include c(list) {
   @include e(item) {
-    @include size()
   }
 }
