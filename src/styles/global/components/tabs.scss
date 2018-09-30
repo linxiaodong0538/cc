@@ -1,0 +1,27 @@
+@import "../../utils/index";
+
+@include c(tabs) {
+  @include size(100%, px2rem(40px * 2));
+
+  display: flex;
+  background-color: map-get($colors, c1);
+  border-bottom: 1px solid map-get($colors, c2);
+
+  @include e(item) {
+    @include text--middle(px2rem(40px * 2));
+
+    color: map-get($colors, c3);
+    text-align: center;
+    flex: 1;
+
+    @include s(is-active) {
+      color: map-get($colors, c4);
+
+      span {
+        display: inline-block;
+        line-height: 20%;
+        border-bottom: px2rem(8px * 2) solid map-get($colors, c7);
+      }
+    }
+  }
+}

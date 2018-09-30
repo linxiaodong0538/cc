@@ -1,0 +1,33 @@
+@import "../../../utils/index";
+
+@include c(news-list) {
+  padding-bottom: px2rem(10px * 2);
+
+  @include e(item) {
+    @include margin(px2rem(10px * 2), px2rem(10px * 2), null, px2rem(10px * 2));
+
+    border-radius: px2rem(6px * 2);
+    background-color: map-get($colors, c1);
+    overflow: hidden;
+  }
+
+  @include cc(card) {
+    @include e(video) {
+      @include size(100%, px2rem(200px * 2));
+
+      display: block;
+    }
+
+    @include e(body) {
+      padding: px2rem(12px * 2);
+    }
+
+    @include e(title, desc, time) {
+      line-height: 100%;
+    }
+
+    @include e(desc) {
+      @include padding(px2rem(10px * 2), null, px2rem(12px * 2));
+    }
+  }
+}

@@ -4,4 +4,18 @@
   @include pb(button) {
     margin-top: px2rem(250px * 2);
   }
+
+  @include pb(check-code) {
+    position: relative;
+
+    @include e(tip) {
+      @include text--middle(px2rem(100px));
+      @include position--absolute(50%, px2rem(10px));
+
+      width: px2rem(250px);
+      transform: translateY(-50%);
+      border-left: 1px solid map-get($colors, c2);
+      text-indent: px2rem(20px);
+    }
+  }
 }

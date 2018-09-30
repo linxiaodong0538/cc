@@ -1,12 +1,10 @@
 @import "../../../styles/utils/index";
 
 @include p(home) {
-  @include position--absolute(0, 0, 0, 0);
-
   background-color: #e5e5e5;
 
   @include pb(demo) {
-    @include position--absolute(0, 0, px2rem(96px), 0);
+    @include size(100%, 100%);
 
     background: {
       image: url("./images/bg.png");
@@ -25,12 +23,12 @@
     }
 
     @include m(comment) {
-      bottom: px2rem(130px * 2);
+      bottom: px2rem(160px * 2);
       background-image: url("./images/comment.png");
     }
 
     @include m(praise) {
-      bottom: px2rem((130px + 62px) * 2);
+      bottom: px2rem((160px + 62px) * 2);
       background-image: url("./images/praise.png");
     }
 
@@ -61,10 +59,10 @@
   }
 
   @include pb(address) {
-    bottom: px2rem(40px * 2);
+    bottom: px2rem(50px * 2);
   }
 
   @include pb(title) {
-    bottom: px2rem(60px * 2);
+    bottom: px2rem(80px * 2);
   }
 }

@@ -1,14 +1,13 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
+import '@/utils/init'
 import Vue from 'vue'
 import App from './App'
 import router from './router'
 import store from '@/store'
 import globalPlugin from '@/utils/plugins/global'
-import '@/utils/init'
 import 'amfe-flexible'
 import '@/utils/styles'
-import '@/styles/global/index.scss'
 
 Vue.config.productionTip = false
 

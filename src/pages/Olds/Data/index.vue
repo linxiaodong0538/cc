@@ -7,54 +7,54 @@
           <ul>
             <li>
               <div>
-                <h2 class="fs11">100/77</h2>
+                <h2 class="fs12">100/77</h2>
                 <div>
-                  <span class="fs4 c7">血压</span>
+                  <span class="fs4 c8">血压</span>
                   <span class="fs1 c3">mmHg</span>
                 </div>
               </div>
             </li>
             <li>
               <div>
-                <h2 class="fs11">100/77</h2>
+                <h2 class="fs12">100/77</h2>
                 <div>
-                  <span class="fs4 c7">血压</span>
+                  <span class="fs4 c8">血压</span>
                   <span class="fs1 c3">mmHg</span>
                 </div>
               </div>
             </li>
             <li>
               <div>
-                <h2 class="fs11">100/77</h2>
+                <h2 class="fs12">100/77</h2>
                 <div>
-                  <span class="fs4 c7">血压</span>
+                  <span class="fs4 c8">血压</span>
                   <span class="fs1 c3">mmHg</span>
                 </div>
               </div>
             </li>
             <li>
               <div>
-                <h2 class="fs11">100/77</h2>
+                <h2 class="fs12">100/77</h2>
                 <div>
-                  <span class="fs4 c7">血压</span>
+                  <span class="fs4 c8">血压</span>
                   <span class="fs1 c3">mmHg</span>
                 </div>
               </div>
             </li>
             <li>
               <div>
-                <h2 class="fs11">100/77</h2>
+                <h2 class="fs12">100/77</h2>
                 <div>
-                  <span class="fs4 c7">血压</span>
+                  <span class="fs4 c8">血压</span>
                   <span class="fs1 c3">mmHg</span>
                 </div>
               </div>
             </li>
             <li>
               <div>
-                <h2 class="fs11">100/77</h2>
+                <h2 class="fs12">100/77</h2>
                 <div>
-                  <span class="fs4 c7">血压</span>
+                  <span class="fs4 c8">血压</span>
                   <span class="fs1 c3">mmHg</span>
                 </div>
               </div>
@@ -66,30 +66,30 @@
         <table class="o-gridtable">
           <thead>
             <tr>
-              <th class="fs4 u-tac">名称</th>
-              <th class="fs4 u-tac">分类</th>
-              <th class="fs4 u-tac">数量</th>
-              <th class="fs4 u-tac">日期</th>
+              <th class="fs4">名称</th>
+              <th class="fs4">分类</th>
+              <th class="fs4">数量</th>
+              <th class="fs4">日期</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td class="fs4 c8 u-tac">医护毛巾</td>
-              <td class="fs4 c8 u-tac">医护毛巾</td>
-              <td class="fs4 c8 u-tac">2</td>
-              <td class="fs4 c8 u-tac">2018.05.06</td>
+              <td class="fs4 c8">医护毛巾</td>
+              <td class="fs4 c8">医护毛巾</td>
+              <td class="fs4 c8">2</td>
+              <td class="fs4 c8">2018.05.06</td>
             </tr>
             <tr>
-              <td class="fs4 c8 u-tac">医护毛巾</td>
-              <td class="fs4 c8 u-tac">医护毛巾</td>
-              <td class="fs4 c8 u-tac">2</td>
-              <td class="fs4 c8 u-tac">2018.05.06</td>
+              <td class="fs4 c8">医护毛巾</td>
+              <td class="fs4 c8">医护毛巾</td>
+              <td class="fs4 c8">2</td>
+              <td class="fs4 c8">2018.05.06</td>
             </tr>
             <tr>
-              <td class="fs4 c8 u-tac">医护毛巾</td>
-              <td class="fs4 c8 u-tac">医护毛巾</td>
-              <td class="fs4 c8 u-tac">2</td>
-              <td class="fs4 c8 u-tac">2018.05.06</td>
+              <td class="fs4 c8">医护毛巾</td>
+              <td class="fs4 c8">医护毛巾</td>
+              <td class="fs4 c8">2</td>
+              <td class="fs4 c8">2018.05.06</td>
             </tr>
           </tbody>
         </table>

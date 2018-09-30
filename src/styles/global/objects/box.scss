@@ -1,9 +1,17 @@
+@import "../../utils/index";
+
 @include o(box) {
-  @include padding(null, px2rpx(30px), null, px2rpx(30px));
+  @include position--absolute(0, 0, 0, 0);
 
-  background-color: map-get($colors, c1);
+  background-color: map-get($colors, c6);
+  overflow-x: hidden;
+  overflow-y: auto;
 
-  @include m(ghost) {
-    background: none;
+  @include s(has-nav-bar) {
+    top: px2rem(90px);
+  }
+
+  @include s(has-tab-bar) {
+    bottom: px2rem(96px);
   }
 }

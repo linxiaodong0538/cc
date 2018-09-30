@@ -1,6 +1,12 @@
+@import "../../../styles/utils/index";
+
 $sm: 10px;
 $md: 20px;
 $lg: 30px;
+
+@include c(padding) {
+  position: relative;
+}
 
 .top {
   padding-top: $md;

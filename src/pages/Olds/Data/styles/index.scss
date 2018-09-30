@@ -51,9 +51,11 @@
     @include size (100%, 100%);
     border-collapse: collapse;
     thead tr th{
+      text-align: center;
       height: px2rem(35px *2);
     }
     tbody td {
+      text-align: center;
       border-top: 1px solid #e6e6e6;
     }
   }

@@ -1,8 +1,10 @@
 <template>
   <div class="c-nav-bar">
     <div
+      v-if="back"
       class="c-nav-bar__back"
-      @click="handleBack"></div>
+      @click="handleBack">
+    </div>
     <div class="c-nav-bar__title c1 fs9">{{ title }}</div>
   </div>
 </template>
@@ -14,6 +16,10 @@
       title: {
         type: String,
         default: ''
+      },
+      back: {
+        type: Boolean,
+        default: false
       }
     },
     methods: {
