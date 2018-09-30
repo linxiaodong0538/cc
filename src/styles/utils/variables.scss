@@ -1,6 +1,6 @@
 // 字体
 $font-sizes: (
-  fs1: 11px,
+  fs1: 10px,
   fs2: 12px,
   fs3: 13px,
   fs4: 14px,
@@ -9,7 +9,8 @@ $font-sizes: (
   fs7: 17px,
   fs8: 18px,
   fs9: 19px,
-  fs10: 20px
+  fs10: 20px,
+  fs11: 22px
 );
 
 // 颜色
@@ -19,5 +20,7 @@ $colors: (
   c3: #b2b2b2,
   c4: #000,
   c5: #39bab8,
-  c6: #f2f2f2
+  c6: #f2f2f2,
+  c7: #888,
+  c8: #4a4a4a
 );

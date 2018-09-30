@@ -21,6 +21,7 @@
     "core-js": "^2.5.3",
     "dayjs": "^1.7.4",
     "iview": "^2.13.0",
+    "jt-time": "^0.0.2",
     "kindeditor": "^4.1.10",
     "minireset.css": "0.0.3",
     "qrcode": "^1.2.2",

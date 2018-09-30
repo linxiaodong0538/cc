@@ -1,4 +1,60 @@
 @import "../../../../styles/utils/index";
 
 @include p(olds-data) {
+  @include position--absolute(0, 0, 0, 0);
+
+  @include pb(wrap-data) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @include e (top) {
+      @include size(px2rem(356px * 2), px2rem(216px * 2));
+      border-radius: 10px;
+      @include m(p) {
+        padding-left: 20px;
+        height: px2rem(31px * 2);
+        line-height: px2rem(31px * 2);
+      }
+    }
+
+    @include e(bottom) {
+      @include size(px2rem(356px * 2), px2rem(158px * 2));
+      margin-top: px2rem(20px);
+      border-radius: 10px;
+    }
+  }
+
+  @include pb(grid) {
+    @include size(100%, px2rem(185px * 2));
+    ul {
+      flex: 1;
+      height: 100%;
+      display: flex;
+      flex-wrap: wrap
+    }
+
+    ul li {
+      @include size(33.33%, 50%);
+      border-top: 1px solid #e6e6e6;
+      border-right: 1px solid #e6e6e6;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      &:nth-child(3n) {
+        border-right: none;
+      }
+    }
+  }
+  @include o (gridtable) {
+    @include size (100%, 100%);
+    border-collapse: collapse;
+    thead tr th{
+      height: px2rem(35px *2);
+    }
+    tbody td {
+      border-top: 1px solid #e6e6e6;
+    }
+  }
 }
