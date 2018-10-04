@@ -11,7 +11,9 @@
           <span>89877666</span>
           <span
             class="c3"
-            style="padding-left: 0.88rem;">房间号：</span>
+            style="padding-left: 0.88rem;">
+            房间号：
+          </span>
           <span>298</span>
         </div>
       </div>
