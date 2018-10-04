@@ -6,6 +6,7 @@
   @include e(item) {
     @include margin(px2rem(10px * 2), px2rem(10px * 2), null, px2rem(10px * 2));
 
+    position: relative;
     border-radius: px2rem(6px * 2);
     background-color: map-get($colors, c1);
     overflow: hidden;

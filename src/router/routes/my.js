@@ -17,6 +17,10 @@ export default {
     {
       path: 'feedback',
       component: resolve => require(['@/pages/My/Feedback'], resolve)
+    },
+    {
+      path: 'contact',
+      component: resolve => require(['@/pages/My/Contact'], resolve)
     }
   ]
 }
