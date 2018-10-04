@@ -1,7 +1,17 @@
 <template>
   <div>
     <div class="p-home o-box has-tab-bar">
-      <div class="pb-demo">
+      <div class="pb-video__wrap">
+        <video
+          id="video"
+          class="pb-video video-js vjs-big-play-centered"
+          poster="https://s0.xingxiaoban.com/upfile/media/20180929/0e75/bd72/idol0014df82cbcda3eda7dddab6fbb965c1eec.jpg"
+          controls
+          data-setup="{}">
+          <source
+            type="video/mp4"
+            src="http://cyyl-xd.liruan.cn/1.mp4" />
+        </video>
         <div class="pb-button pb-button--praise">
           <div class="pb-button__num c4 fs2">88</div>
           <div class="pb-button__text c1 fs2">点赞</div>
@@ -20,11 +30,21 @@
 </template>
 
 <script>
+  import videojs from 'video.js'
   import TabBar from '@/components/TabBar'
 
   export default {
     components: {
       TabBar
+    },
+    mounted () {
+      const video = videojs(document.getElementById('video'), {
+        preload: true
+      }, function () {
+        console.log(333)
+      })
+
+      video.autoplay()
     }
   }
 </script>

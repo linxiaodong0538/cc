@@ -9,6 +9,10 @@ export default {
     {
       path: 'messages',
       component: resolve => require(['@/pages/My/Messages'], resolve)
+    },
+    {
+      path: 'comments',
+      component: resolve => require(['@/pages/My/Comments'], resolve)
     }
   ]
 }

@@ -1,0 +1,8 @@
+@import "../../utils/index";
+
+@include c(overlay) {
+  @include position--fixed(0, 0, px2rem(96px), 0);
+
+  background-color: map-get($colors, c4);
+  opacity: .6;
+}

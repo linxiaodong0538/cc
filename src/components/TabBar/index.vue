@@ -22,6 +22,11 @@
     </div>
     <div
       v-show="cDrop.visible"
+      id="overlay"
+      class="c-overlay">
+    </div>
+    <div
+      v-show="cDrop.visible"
       class="cc-drop fs5">
       <div
         class="cc-drop__item is-first"

@@ -1,14 +1,19 @@
 @import "../../../styles/utils/index";
+@import "~video.js/src/css/video-js";
 
 @include p(home) {
   background-color: #e5e5e5;
 
-  @include pb(demo) {
-    @include size(100%, 100%);
+  @include pb(video) {
+    @include size(px2rem(750px), 100%);
 
-    background: {
-      image: url("./images/bg.png");
-      size: 100% 100%;
+    @include e(wrap) {
+      @include size(100%, 100%);
+
+      background: {
+        image: url("./images/bg.png");
+        size: 100% 100%;
+      }
     }
   }
 

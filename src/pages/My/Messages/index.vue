@@ -3,7 +3,7 @@
     <NavBar
       title="我的消息"
       back />
-    <div class="p-my-home o-box has-nav-bar">
+    <div class="p-my-messages o-box has-nav-bar">
       <ul class="c-message-list">
         <li class="c-message-list__item">
           <div class="c-message-list__body fs6">9月28号是王洪老人的生日，届时养老院会有庆祝活动消息发出，请注意查收。</div>
