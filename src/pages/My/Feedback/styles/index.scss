@@ -1,0 +1,15 @@
+@import "../../../../styles/utils/index";
+
+@include p(my-feedback) {
+  @include pb(textarea) {
+    @include size(100%, px2rem(193px * 2));
+
+    padding: px2rem(20px * 2);
+    border: 0;
+    border-bottom: 1px solid map-get($colors, c2);
+  }
+
+  @include pb(button) {
+    margin-top: px2rem(30px * 2);
+  }
+}

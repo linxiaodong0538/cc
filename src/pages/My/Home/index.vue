@@ -17,7 +17,11 @@
           @click="$router.push('/my/comments')">
           我的评论
         </li>
-        <li class="c-list__item">意见反馈</li>
+        <li
+          class="c-list__item"
+          @click="$router.push('/my/feedback')">
+          意见反馈
+        </li>
         <li class="c-list__item">联系我们</li>
       </ul>
       <div

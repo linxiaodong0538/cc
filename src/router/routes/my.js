@@ -13,6 +13,10 @@ export default {
     {
       path: 'comments',
       component: resolve => require(['@/pages/My/Comments'], resolve)
+    },
+    {
+      path: 'feedback',
+      component: resolve => require(['@/pages/My/Feedback'], resolve)
     }
   ]
 }
