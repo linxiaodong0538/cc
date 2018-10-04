@@ -22,11 +22,15 @@
           @click="$router.push('/my/feedback')">
           意见反馈
         </li>
-        <li class="c-list__item">联系我们</li>
+        <li
+          class="c-list__item"
+          @click="$router.push('/my/contact')">
+          联系我们
+        </li>
       </ul>
       <div
         class="pb-button c-button c-button--2 c5 bd-c5 fs6"
-        @click="handleLogin">
+        @click="handleLogout">
         切换账号
       </div>
     </div>
@@ -42,6 +46,9 @@
     components: {
       NavBar,
       TabBar
+    },
+    methods: {
+      handleLogout () {}
     }
   }
 </script>

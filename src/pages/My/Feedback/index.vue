@@ -13,7 +13,7 @@
         :dirs="[ 'left', 'right' ]">
         <div
           class="pb-button c-button c-button--1 c1 fs6"
-          @click="handleLogin">
+          @click="handleSubmit">
           提交
         </div>
       </Padding>
@@ -31,6 +31,9 @@
       NavBar,
       TabBar,
       Padding
+    },
+    methods: {
+      handleSubmit () {}
     }
   }
 </script>
