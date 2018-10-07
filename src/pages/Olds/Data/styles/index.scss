@@ -20,7 +20,7 @@
     }
 
     @include e(bottom) {
-      @include size(px2rem(356px * 2), px2rem(158px * 2));
+      @include size(px2rem(356px * 2), px2rem(158px / 2 * 2));
       margin-top: px2rem(20px);
       border-radius: 10px;
     }

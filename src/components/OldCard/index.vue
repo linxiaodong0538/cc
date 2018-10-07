@@ -5,7 +5,7 @@
         class="c-old-card__image"
         src="./styles/images/avatar.png" />
       <div class="c-old-card__body">
-        <div class="c-old-card__name fs12">程江杰</div>
+        <div class="c-old-card__name fs12">陈爸爸</div>
         <div class="c-old-card__info fs3">
           <span class="c3">入院号：</span>
           <span>89877666</span>

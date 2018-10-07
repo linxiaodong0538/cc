@@ -20,10 +20,10 @@
             <ul>
               <li>
                 <div>
-                  <h2 class="fs12">100/77</h2>
+                  <h2 class="fs12">7.4</h2>
                   <div>
-                    <span class="fs4 c8">血压</span>
-                    <span class="fs1 c3">mmHg</span>
+                    <span class="fs4 c8">血糖</span>
+                    <span class="fs1 c3">mmol/L</span>
                   </div>
                 </div>
               </li>
@@ -38,40 +38,32 @@
               </li>
               <li>
                 <div>
-                  <h2 class="fs12">100/77</h2>
+                  <h2 class="fs12">37.2</h2>
                   <div>
-                    <span class="fs4 c8">血压</span>
-                    <span class="fs1 c3">mmHg</span>
+                    <span class="fs4 c8">体温</span>
+                    <span class="fs1 c3">℃</span>
                   </div>
                 </div>
               </li>
               <li>
                 <div>
-                  <h2 class="fs12">100/77</h2>
+                  <h2 class="fs12">77</h2>
                   <div>
-                    <span class="fs4 c8">血压</span>
-                    <span class="fs1 c3">mmHg</span>
+                    <span class="fs4 c8">脉搏</span>
+                    <span class="fs1 c3">次/分</span>
                   </div>
                 </div>
               </li>
               <li>
                 <div>
-                  <h2 class="fs12">100/77</h2>
+                  <h2 class="fs12">65</h2>
                   <div>
-                    <span class="fs4 c8">血压</span>
-                    <span class="fs1 c3">mmHg</span>
+                    <span class="fs4 c8">心率</span>
+                    <span class="fs1 c3">次/分</span>
                   </div>
                 </div>
               </li>
-              <li>
-                <div>
-                  <h2 class="fs12">100/77</h2>
-                  <div>
-                    <span class="fs4 c8">血压</span>
-                    <span class="fs1 c3">mmHg</span>
-                  </div>
-                </div>
-              </li>
+              <li></li>
             </ul>
           </div>
         </div>
@@ -86,18 +78,6 @@
             </tr>
             </thead>
             <tbody>
-            <tr>
-              <td class="fs4 c8">医护毛巾</td>
-              <td class="fs4 c8">医护毛巾</td>
-              <td class="fs4 c8">2</td>
-              <td class="fs4 c8">2018.05.06</td>
-            </tr>
-            <tr>
-              <td class="fs4 c8">医护毛巾</td>
-              <td class="fs4 c8">医护毛巾</td>
-              <td class="fs4 c8">2</td>
-              <td class="fs4 c8">2018.05.06</td>
-            </tr>
             <tr>
               <td class="fs4 c8">医护毛巾</td>
               <td class="fs4 c8">医护毛巾</td>

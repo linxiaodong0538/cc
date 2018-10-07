@@ -1,0 +1,17 @@
+@import "../../utils/index";
+
+@include c(textarea-wrap) {
+  z-index: 5;
+
+  @include c(button) {
+    margin-top: px2rem(30px * 2);
+  }
+}
+
+@include c(textarea) {
+  @include size(100%, px2rem(193px * 2));
+
+  padding: px2rem(20px * 2);
+  border: 0;
+  border-bottom: 1px solid map-get($colors, c2);
+}

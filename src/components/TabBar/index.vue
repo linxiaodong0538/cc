@@ -1,10 +1,16 @@
 <template>
-  <div class="c-tab-bar">
+  <div
+    class="c-tab-bar"
+    :class="{ 'is-active': isHome }">
     <div
-      class="c-tab-bar__item c5 fs5"
+      class="c-tab-bar__item fs5"
+      :class="{ 'is-active': isHome }"
       @click.stop="toggleDropVisible">
-      <div class="c-icon c-icon--extend"></div>
-      赵老人
+      <div
+        class="c-icon c-icon--extend"
+        :class="{ 'is-active': isHome }">
+      </div>
+      陈爸爸
     </div>
     <div
       class="c-tab-bar__item"
@@ -16,7 +22,8 @@
       </div>
     </div>
     <div
-      class="c-tab-bar__item c5 fs5"
+      class="c-tab-bar__item fs5"
+      :class="{ 'is-active': isHome }"
       @click="$router.push('/my/home')">
       我的
     </div>
@@ -32,13 +39,13 @@
         class="cc-drop__item is-first"
         :class="{ 'is-active': cDrop.current === 0 }"
         @click="handleSelectDrop(0)">
-        赵老人
+        陈爸爸
       </div>
       <div
         class="cc-drop__item"
         :class="{ 'is-active': cDrop.current === 1}"
         @click="handleSelectDrop(1)">
-        陈老人
+        陈妈妈
       </div>
     </div>
   </div>
@@ -48,6 +55,7 @@
   export default {
     data () {
       return {
+        isHome: true,
         cDrop: {
           visible: false,
           current: 0
@@ -63,6 +71,9 @@
         this.cDrop.visible = false
         this.$router.push('/olds/trends')
       }
+    },
+    created () {
+      this.isHome = this.$route.path === '/'
     },
     mounted () {
       document.getElementById('app').addEventListener('click', () => {

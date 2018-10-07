@@ -4,19 +4,22 @@
       title="意见反馈"
       back />
     <div class="p-my-feedback o-box has-nav-bar">
-      <textarea
-        class="pb-textarea fs4"
-        placeholder="输入您的意见或建议">
-      </textarea>
-      <Padding
-        size="lg"
-        :dirs="[ 'left', 'right' ]">
-        <div
-          class="pb-button c-button c-button--1 c1 fs6"
-          @click="handleSubmit">
-          提交
-        </div>
-      </Padding>
+      <div class="c-textarea-wrap">
+        <textarea
+          class="c-textarea fs4"
+          placeholder="输入您的意见或建议"
+          v-model="formData.content">
+        </textarea>
+        <Padding
+          size="lg"
+          :dirs="[ 'left', 'right' ]">
+          <div
+            class="c-button c-button--1 c1 fs6"
+            @click="handleSubmit">
+            提交
+          </div>
+        </Padding>
+      </div>
     </div>
   </div>
 </template>
@@ -32,8 +35,21 @@
       TabBar,
       Padding
     },
+    data () {
+      return {
+        formData: {
+          feedback: ''
+        }
+      }
+    },
     methods: {
-      handleSubmit () {}
+      handleSubmit () {
+        if (!this.formData.content) {
+          this.$toast('内容不能为空')
+          return
+        }
+        this.$toast('提交成功')
+      }
     }
   }
 </script>

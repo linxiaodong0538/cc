@@ -3,7 +3,7 @@
     <NavBar title="我的" />
     <div class="p-my-home o-box has-nav-bar has-tab-bar">
       <div class="pb-name fs10">
-        赵儿子
+        陈靓
         <div class="pb-name__relation c8 fs6">父子关系</div>
       </div>
       <ul class="c-list fs8">
@@ -48,7 +48,9 @@
       TabBar
     },
     methods: {
-      handleLogout () {}
+      handleLogout () {
+        this.$router.push('/logout')
+      }
     }
   }
 </script>

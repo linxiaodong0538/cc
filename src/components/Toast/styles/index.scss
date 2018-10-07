@@ -10,4 +10,5 @@
   background-color: rgba(map-get($colors, c4), .6);
   border-radius: px2rem(4px);
   text-align: center;
+  z-index: 4;
 }
