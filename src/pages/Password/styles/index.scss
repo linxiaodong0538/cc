@@ -1,6 +1,8 @@
 @import "../../../styles/utils/index";
 
 @include p(password) {
+  background-color: white;
+
   @include pb(button) {
     margin-top: px2rem(250px * 2);
   }

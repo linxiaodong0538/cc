@@ -57,7 +57,7 @@
     },
     methods: {
       preview (index) {
-        return 'http://localhost:88/pages/home/preview-' + index + '.jpg'
+        return 'http://cyyl-xd.liruan.cn/cdn/pages/home/preview-' + index + '.jpg'
       }
     },
     mounted () {

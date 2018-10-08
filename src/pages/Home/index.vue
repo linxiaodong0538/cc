@@ -14,7 +14,6 @@
           <video
             class="pb-video video-js vjs-big-play-centered"
             :poster="preview(index)"
-            muted
             data-setup="{}">
             <source
               type="video/mp4"
@@ -115,7 +114,7 @@
         this.cTexterea.visible = false
       },
       preview (index) {
-        return 'http://localhost:88/pages/home/preview-' + index + '.jpg'
+        return 'http://cyyl-xd.liruan.cn/cdn/pages/home/preview-' + index + '.jpg'
       },
       handleSlideChangeTransitionEnd () {
         for (let i = 0; i < videoPlayers.length; i++) {
