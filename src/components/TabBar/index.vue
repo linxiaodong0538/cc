@@ -3,6 +3,14 @@
     class="c-tab-bar"
     :class="{ 'is-active': isHome }">
     <div
+      v-if="true"
+      class="c-tab-bar__item fs5"
+      :class="{ 'is-active': isHome }"
+      @click="$router.push('/olds/trends')">
+      陈爸爸
+    </div>
+    <div
+      v-else
       class="c-tab-bar__item fs5"
       :class="{ 'is-active': isHome }"
       @click.stop="toggleDropVisible">
