@@ -1,14 +1,24 @@
 @import "../../../styles/utils/index";
 
 @include p(home) {
-  background-color: #e5e5e5;
+  background-color: map-get($colors, c3);
 
-  @include pb(demo) {
-    @include size(100%, 100%);
+  @include pb(video) {
+    @include size(px2rem(750px), 100%);
 
-    background: {
-      image: url("./images/bg.png");
-      size: 100% 100%;
+    @include e(wrap) {
+      @include size(100%, 100%);
+      position: relative;
+
+      background: {
+        image: url("./images/bg.png");
+        size: 100% 100%;
+      }
+    }
+
+    @include e(overlay) {
+      @include position--absolute(0, 0, 0, 0);
+      z-index: 3
     }
   }
 
@@ -17,18 +27,19 @@
 
     width: px2rem(28px * 2);
     text-align: center;
+    z-index: 4;
     background: {
       size: px2rem(56px) px2rem(52px);
       repeat: no-repeat;
     }
 
     @include m(comment) {
-      bottom: px2rem(160px * 2);
+      bottom: px2rem(210px * 2);
       background-image: url("./images/comment.png");
     }
 
     @include m(praise) {
-      bottom: px2rem((160px + 62px) * 2);
+      bottom: px2rem((210px + 62px) * 2);
       background-image: url("./images/praise.png");
     }
 
@@ -55,14 +66,20 @@
   }
 
   @include pb(time) {
-    bottom: px2rem(20px * 2);
+    bottom: px2rem(70px * 2);
   }
 
   @include pb(address) {
-    bottom: px2rem(50px * 2);
+    bottom: px2rem(100px * 2);
   }
 
   @include pb(title) {
-    bottom: px2rem(80px * 2);
+    bottom: px2rem(130px * 2);
+  }
+
+  @include c(textarea-wrap){
+    @include position--fixed(0);
+
+    width: 100%;
   }
 }

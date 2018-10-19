@@ -11,7 +11,7 @@ const PROD = 'PROD'
 const ENV = HOST === 'localhost:8080' ? DEV : PROD
 
 // 基础地址
-const BASE_URL = ENV === !DEV ? 'http://localhost:3002' : 'https://www.chongyangyanglao.com'
+const BASE_URL = 'https://www.rjwb.cn' // ENV === !DEV ? 'http://localhost:3002' : 'https://www.chongyangyanglao.com'
 
 // 接口地址
 const API_URL = BASE_URL + '/apis/v1'
@@ -23,6 +23,9 @@ const PAGE_SIZE = 10
 const TITLE = '网站后台'
 
 export default {
+  HOST,
+  DEV,
+  ENV,
   BASE_URL,
   API_URL,
   PAGE_SIZE,

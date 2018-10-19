@@ -9,6 +9,18 @@ export default {
     {
       path: 'messages',
       component: resolve => require(['@/pages/My/Messages'], resolve)
+    },
+    {
+      path: 'comments',
+      component: resolve => require(['@/pages/My/Comments'], resolve)
+    },
+    {
+      path: 'feedback',
+      component: resolve => require(['@/pages/My/Feedback'], resolve)
+    },
+    {
+      path: 'contact',
+      component: resolve => require(['@/pages/My/Contact'], resolve)
     }
   ]
 }

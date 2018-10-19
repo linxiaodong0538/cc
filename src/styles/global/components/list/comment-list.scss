@@ -1,0 +1,46 @@
+@import "../../../utils/index";
+
+@include c(comment-list) {
+  background-color: map-get($colors, c1);
+
+  @include e(item) {
+    position: relative;
+  }
+
+  @include e(body) {
+    @include margin(null, null, null, px2rem((12px + 40px + 12px) * 2));
+    @include padding(px2rem(12px * 2), px2rem((12px + 58px + 12px) * 2), px2rem(12px * 2));
+
+    word-break: break-all;
+    border-bottom: 1px solid map-get($colors, c2);
+  }
+
+  @include e(title) {
+    line-height: 150%;
+  }
+
+  @include e(content) {
+    @include padding(px2rem(12px), null, px2rem(12px));
+
+    line-height: 150%;
+  }
+
+  @include e(time) {
+    line-height: 150%;
+  }
+
+  @include e(avatar) {
+    @include position--absolute(px2rem(12px * 2), null, null, px2rem(12px * 2));
+    @include size(px2rem(80px), px2rem(80px));
+
+    display: block;
+  }
+
+  @include e(preview) {
+    @include position--absolute(px2rem(12px * 2), px2rem(12px * 2));
+    @include size(px2rem(58px * 2), px2rem(58px * 2));
+
+    border-radius: px2rem(3px * 2);
+    display: block;
+  }
+}

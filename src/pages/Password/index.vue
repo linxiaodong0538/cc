@@ -1,40 +1,42 @@
 <template>
-  <div class="p-password">
+  <div>
     <NavBar
       title="忘记密码"
       back />
-    <Padding
-      size="lg"
-      :dirs="[ 'left', 'right' ]">
-      <input
-        class="c-input fs6"
-        type="text"
-        placeholder="请输入手机号"
-        v-model="formValidate.telephone" />
-      <input
-        class="c-input fs6"
-        type="password"
-        placeholder="请输入密码"
-        v-model="formValidate.password" />
-      <div class="pb-check-code">
+    <div class="p-password o-box has-nav-bar">
+      <Padding
+        size="lg"
+        :dirs="[ 'left', 'right' ]">
         <input
           class="c-input fs6"
           type="text"
-          placeholder="请输入短信验证码"
-          v-model="formValidate.check_code" />
-        <div
-          class="pb-check-code__tip fs4"
-          :class="[ checkCode.got ? ' c3': ' c5' ]"
-          @click="handleGetCheckCode">
-          {{ checkCode.tip }}
+          placeholder="请输入手机号"
+          v-model="formValidate.telephone" />
+        <input
+          class="c-input fs6"
+          type="password"
+          placeholder="请输入密码"
+          v-model="formValidate.password" />
+        <div class="pb-check-code">
+          <input
+            class="c-input fs6"
+            type="text"
+            placeholder="请输入短信验证码"
+            v-model="formValidate.check_code" />
+          <div
+            class="pb-check-code__tip fs4"
+            :class="[ checkCode.got ? ' c3': ' c5' ]"
+            @click="handleGetCheckCode">
+            {{ checkCode.tip }}
+          </div>
         </div>
-      </div>
-      <div
-        class="pb-button c-button c-button--1 c1 fs6"
-        @click="handleConfirm">
-        确认修改
-      </div>
-    </Padding>
+        <div
+          class="pb-button c-button c-button--1 c1 fs6"
+          @click="handleConfirm">
+          确认修改
+        </div>
+      </Padding>
+    </div>
   </div>
 </template>
 

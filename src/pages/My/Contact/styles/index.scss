@@ -1,0 +1,9 @@
+@import "../../../../styles/utils/index";
+
+@include p(my-contact) {
+  @include c(icon) {
+    @include m(address) {
+      @include position--absolute(null, px2rem(12px * 2), px2rem(12px * 2));
+    }
+  }
+}

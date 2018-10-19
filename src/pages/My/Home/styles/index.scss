@@ -22,7 +22,7 @@
   @include pb(button) {
     @include block--center;
 
-    margin-top: px2rem(180px * 2);
+    margin-top: px2rem(100px * 2);
     width: px2rem(315px * 2);
   }
 }

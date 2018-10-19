@@ -11,6 +11,7 @@ import families from './modules/families'
 import staffs from './modules/staffs'
 import settings from './modules/settings'
 import relations from './modules/relations'
+import messages from './modules/messages'
 
 Vue.use(Vuex)
 
@@ -29,6 +30,7 @@ export default new Vuex.Store({
     families,
     staffs,
     settings,
-    relations
+    relations,
+    messages
   }
 })

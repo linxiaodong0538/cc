@@ -12,5 +12,15 @@
     @include size(px2rem(28px), px2rem(24px));
 
     background-image: url("./images/extend.png");
+
+    &.is-active {
+      background-image: url("./images/extend-active.png");
+    }
+  }
+
+  @include m(address) {
+    @include size(px2rem(56px), px2rem(54px));
+
+    background-image: url("./images/address.png");
   }
 }

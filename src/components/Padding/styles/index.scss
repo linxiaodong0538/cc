@@ -1,8 +1,8 @@
 @import "../../../styles/utils/index";
 
-$sm: 10px;
-$md: 20px;
-$lg: 30px;
+$sm: px2rem(10px * 2);
+$md: px2rem(20px * 2);
+$lg: px2rem(30px * 2) ;
 
 @include c(padding) {
   position: relative;

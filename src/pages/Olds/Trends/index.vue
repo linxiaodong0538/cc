@@ -2,50 +2,32 @@
   <div>
     <NavBar title="健康动态" />
     <div class="p-olds-trends o-box has-nav-bar has-tab-bar">
-      <div class="pb-card__wrap">
-        <div class="pb-card">
-          <img
-            class="pb-card__image"
-            src="./styles/images/avatar.png" />
-          <div class="pb-card__body">
-            <div class="pb-card__name fs12">程江杰</div>
-            <div class="pb-card__info fs3">
-              <span class="c3">入院号：</span>
-              <span>89877666</span>
-              <span
-                class="c3"
-                style="padding-left: 0.88rem;">房间号：</span>
-              <span>298</span>
-            </div>
-          </div>
-        </div>
-      </div>
+      <OldCard />
       <ul class="c-tabs fs4">
         <li class="c-tabs__item is-active">
           <span>健康动态</span>
         </li>
-        <li class="c-tabs__item">
+        <li
+          class="c-tabs__item"
+          @click="$router.push('/olds/data')">
           <span>健康数据</span>
         </li>
       </ul>
       <ul class="c-news-list">
-        <li class="c-news-list__item">
+        <li
+          v-for="(item, index) in [0, 1]"
+          :key="index"
+          class="c-news-list__item">
           <div class="cc-card">
-            <img
-              class="cc-card__video"
-              src="./styles/images/video.png" />
-            <div class="cc-card__body">
-              <div class="cc-card__title fs8">国际先进养老理念</div>
-              <div class="cc-card__desc c8 fs4">引进美国先进的养老经验，结合国内养老特点</div>
-              <div class="cc-card__time c3 fs2">2018-03-17</div>
-            </div>
-          </div>
-        </li>
-        <li class="c-news-list__item">
-          <div class="cc-card">
-            <img
-              class="cc-card__video"
-              src="./styles/images/video.png" />
+            <video
+              class="cc-card__video video-js vjs-big-play-centered"
+              :poster="preview(index)"
+              controls
+              data-setup="{}">
+              <source
+                type="video/mp4"
+                src="http://cyyl-xd.liruan.cn/1.mp4" />
+            </video>
             <div class="cc-card__body">
               <div class="cc-card__title fs8">国际先进养老理念</div>
               <div class="cc-card__desc c8 fs4">引进美国先进的养老经验，结合国内养老特点</div>
@@ -60,13 +42,30 @@
 </template>
 
 <script>
+  import videojs from 'video.js'
   import NavBar from '@/components/NavBar'
   import TabBar from '@/components/TabBar'
+  import OldCard from '@/components/OldCard'
+
+  const videoPlayers = []
 
   export default {
     components: {
       NavBar,
-      TabBar
+      TabBar,
+      OldCard
+    },
+    methods: {
+      preview (index) {
+        return 'http://cyyl-xd.liruan.cn/cdn/pages/home/preview-' + index + '.jpg'
+      }
+    },
+    mounted () {
+      const videos = document.getElementsByClassName('video-js')
+
+      for (let i = 0; i < videos.length; i++) {
+        videoPlayers[i] = videojs(videos[i], { preload: true })
+      }
     }
   }
 </script>

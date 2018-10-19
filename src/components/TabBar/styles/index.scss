@@ -3,16 +3,27 @@
 @include c(tab-bar) {
   @include position--absolute(null, null, 0, 0);
   @include size(100%, px2rem(96px));
+  z-index: 2;
 
   display: flex;
   align-items: center;
   background-color: rgba(248, 248, 248, 0.82);
   border-top: 1px solid map-get($colors, c2);
 
+  &.is-active {
+    border-top: 1px solid rgba(map-get($colors, c2), .6);
+    background: none;
+  }
+
   @include e(item) {
     flex: 1;
     position: relative;
     text-align: center;
+    color: map-get($colors, c5);
+
+    &.is-active {
+      color: rgba(map-get($colors, c1), .6);
+    }
 
     @include c(icon) {
       vertical-align: middle;
@@ -45,6 +56,7 @@
     @include position--absolute(px2rem(-180px), null, null, px2rem(20px * 2));
     @include size(px2rem(196px), px2rem(176px));
 
+    z-index: 6;
     background: {
       image: url("./images/drop-bg.png");
       size: 100% 100%;

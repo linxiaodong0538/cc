@@ -4,9 +4,9 @@
   @include pb(logo) {
     @include size(100%, px2rem(514px));
 
-    margin-top: px2rem(52px * 2);
+    // margin-top: px2rem(52px * 2);
     background: {
-      image: url("./images/logo.png");
+      image: url("http://cyyl-xd.liruan.cn/cdn/pages/login/logo.png");
       size: 100% 100%;
     }
   }

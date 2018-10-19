@@ -3,19 +3,11 @@
     <NavBar
       title="我的消息"
       back />
-    <div class="p-my-home o-box has-nav-bar">
+    <div class="p-my-messages o-box has-nav-bar">
       <ul class="c-message-list">
-        <li class="c-message-list__item">
-          <div class="c-message-list__body fs6">9月28号是王洪老人的生日，届时养老院会有庆祝活动消息发出，请注意查收。</div>
-          <div class="c-message-list__time c3 fs2">发布于 2018-02-18 06:30</div>
-        </li>
-        <li class="c-message-list__item">
-          <div class="c-message-list__body fs6">9月28号是王洪老人的生日，届时养老院会有庆祝活动消息发出，请注意查收。</div>
-          <div class="c-message-list__time c3 fs2">发布于 2018-02-18 06:30</div>
-        </li>
-        <li class="c-message-list__item">
-          <div class="c-message-list__body fs6">9月28号是王洪老人的生日，届时养老院会有庆祝活动消息发出，请注意查收。</div>
-          <div class="c-message-list__time c3 fs2">发布于 2018-02-18 06:30</div>
+        <li class="c-message-list__item" v-for="(item, index) in messagesList.items" :key="index">
+          <div class="c-message-list__body fs6">{{item.content}}</div>
+          <div class="c-message-list__time c3 fs2">{{item.created_at}}</div>
         </li>
       </ul>
     </div>
@@ -30,7 +22,27 @@
     components: {
       NavBar,
       TabBar
-    }
+    },
+    created () {
+      this.getMessagesList()
+    },
+    data () {
+      return {
+        messagesList: []
+      }
+    },
+    methods: {
+      async getMessagesList () {
+        const res = await this.$store.dispatch('getMessages', {
+          query: {
+            offset: 0,
+            limit: 100
+          }
+        })
+        this.messagesList = res.data
+      }
+    },
+    mounted () {}
   }
 </script>
 
