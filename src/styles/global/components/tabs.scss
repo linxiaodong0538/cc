@@ -1,27 +1,50 @@
 @import "../../utils/index";
 
 @include c(tabs) {
-  @include size(100%, px2rem(40px * 2));
+  position: relative;
 
-  display: flex;
-  background-color: map-get($colors, c1);
-  border-bottom: 1px solid map-get($colors, c2);
+  @include e(wrap) {
+    width: 100%;
+    overflow-x: hidden;
+  }
 
-  @include e(item) {
+  @include e(content) {
+    width: 200%;
+  }
+
+  @include e(nav) {
+    @include size(100%, px2rem(40px * 2));
+
+    display: flex;
+    background-color: map-get($colors, c1);
+    border-bottom: 1px solid map-get($colors, c2);
+  }
+
+  @include e(nav-item) {
     @include text--middle(px2rem(40px * 2));
 
-    color: map-get($colors, c3);
+    color: map-get($colors, c8);
     text-align: center;
     flex: 1;
 
     @include s(is-active) {
-      color: map-get($colors, c4);
+      color: map-get($colors, c5);
+    }
+  }
 
-      span {
-        display: inline-block;
-        line-height: 20%;
-        border-bottom: px2rem(8px * 2) solid map-get($colors, c7);
-      }
+  @include e(nav-line) {
+    @include position--absolute(null, null, 1px);
+    @include size(px2rem(100px * 2), px2rem(2px * 2));
+
+    background-color: map-get($colors, c5);
+    transition-duration: .2s;
+
+    @include s(is-0) {
+      transform: translateX(px2rem(750px / 2 / 2 - 200 / 2));
+    }
+
+    @include s(is-1) {
+      transform: translateX(px2rem(750px / 2 / 2 - 200 / 2 + 375px));
     }
   }
 }
