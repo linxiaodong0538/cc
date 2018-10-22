@@ -5,7 +5,7 @@
       back />
     <div class="p-my-messages o-box has-nav-bar">
       <ul class="c-message-list">
-        <li class="c-message-list__item" v-for="(item, index) in messagesList.items" :key="index">
+        <li class="c-message-list__item" v-for="(item, index) in list.items " :key="index">
           <div class="c-message-list__body fs6">{{item.content}}</div>
           <div class="c-message-list__time c3 fs2">{{item.created_at}}</div>
         </li>
@@ -17,6 +17,8 @@
 <script>
   import NavBar from '@/components/NavBar'
   import TabBar from '@/components/TabBar'
+  import { mapState } from 'vuex'
+  const module = 'messages'
 
   export default {
     components: {
@@ -27,19 +29,21 @@
       this.getMessagesList()
     },
     data () {
-      return {
-        messagesList: []
-      }
+      return {}
+    },
+    computed: {
+      ...mapState({
+        list: state => state[module].list
+      })
     },
     methods: {
       async getMessagesList () {
-        const res = await this.$store.dispatch('getMessages', {
+        await this.$store.dispatch(`${module}/getList`, {
           query: {
             offset: 0,
             limit: 100
           }
         })
-        this.messagesList = res.data
       }
     },
     mounted () {}
