@@ -1,4 +1,7 @@
 @import "../../../../styles/utils/index";
 
 @include p(olds-trends) {
+  @include c(news-list){
+    width: 50%;
+  }
 }
