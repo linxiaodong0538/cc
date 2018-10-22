@@ -15,10 +15,9 @@
       </ul>
       <div class="pb-wrap-data">
         <div class="pb-wrap-data__top bg-c1">
-          <p class="fs4 pb-wrap-data__top--p">2018年1月1日</p>
           <div class="pb-grid">
             <ul>
-              <li>
+              <li >
                 <div>
                   <h2 class="fs12">7.4</h2>
                   <div>
@@ -67,6 +66,7 @@
             </ul>
           </div>
         </div>
+
         <div class="pb-wrap-data__bottom bg-c1">
           <table class="o-gridtable">
             <thead>
@@ -97,12 +97,44 @@
   import NavBar from '@/components/NavBar'
   import TabBar from '@/components/TabBar'
   import OldCard from '@/components/OldCard'
+  import { mapState } from 'vuex'
+  const module = 'oldHealthRecords'
 
   export default {
     components: {
       NavBar,
       TabBar,
       OldCard
+    },
+    async created () {
+      const res = await this.getOldData()
+      this.oldData = res
+      console.log(this.oldData)
+    },
+    data () {
+      return {
+        oldData: []
+      }
+    },
+    computed: {
+      ...mapState({
+        list: state => state[module].list
+      })
+    },
+    methods: {
+      getList (num) {
+        return this.$store.dispatch(`${module}/getList`, {
+          query: {
+            where: {
+              indicator: {$eq: `${num}`},
+              oldId: '2588'
+            }
+          }
+        })
+      },
+      async getOldData () {
+        return Promise.all([this.getList(1), this.getList(2), this.getList(3), this.getList(4), this.getList(5)])
+      }
     }
   }
 </script>

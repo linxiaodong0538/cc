@@ -9,7 +9,7 @@
     justify-content: center;
 
     @include e (top) {
-      @include size(px2rem(356px * 2), px2rem(216px * 2));
+      @include size(px2rem(356px * 2), px2rem(300px * 2));
       margin-top: px2rem(20px);
       border-radius: 10px;
       @include m(p) {
@@ -27,7 +27,7 @@
   }
 
   @include pb(grid) {
-    @include size(100%, px2rem(185px * 2));
+    @include size(100%, 100%);
     ul {
       flex: 1;
       height: 100%;
@@ -36,15 +36,18 @@
     }
 
     ul li {
-      @include size(33.33%, 50%);
-      border-top: 1px solid #e6e6e6;
-      border-right: 1px solid #e6e6e6;
+      @include size(50%,null);
+      border-right:1px solid #cdcdcd;
+      border-top:1px solid #cdcdcd;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
-      &:nth-child(3n) {
-        border-right: none;
+      &:nth-child(2n) {
+        border-right:none
+      }
+      &:nth-child(-n+2) {
+        border-top:none;
       }
     }
   }

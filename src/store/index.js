@@ -12,6 +12,7 @@ import staffs from './modules/staffs'
 import settings from './modules/settings'
 import relations from './modules/relations'
 import messages from './modules/messages'
+import oldHealthRecords from './modules/oldHealthRecords/'
 
 Vue.use(Vuex)
 
@@ -31,6 +32,7 @@ export default new Vuex.Store({
     staffs,
     settings,
     relations,
-    messages
+    messages,
+    oldHealthRecords
   }
 })
