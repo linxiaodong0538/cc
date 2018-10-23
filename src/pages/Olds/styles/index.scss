@@ -1,7 +1,41 @@
-@import "../../../../styles/utils/index";
+@import "../../../styles/utils/index";
 
-@include p(olds-trends) {
-  @include c(news-list){
+@include p(olds) {
+  @include c(news-list) {
     width: 50%;
+  }
+
+  @include pb(data) {
+    @include clearfix;
+
+    @include e(item) {
+      @include padding(px2rem(40px), null, px2rem(40px));
+
+      text-align: center;
+      width: 50%;
+      float: left;
+      border-right: 1px solid map-get($colors, c2);
+      border-bottom: 1px solid map-get($colors, c2);
+
+      &:nth-child(even) {
+        border-right: 0;
+      }
+
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+
+    @include e(title) {
+      @include s(is-overflow) {
+        color: map-get($colors, c10);
+      }
+    }
+
+    @include e(body) {
+      @include padding(px2rem(15px), null, px2rem(15px));
+
+      line-height: 100%;
+    }
   }
 }

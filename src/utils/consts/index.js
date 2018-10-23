@@ -1,3 +1,5 @@
+import HEALTH_INDICATORS from './healthIndicators'
+
 // 当前 host
 const HOST = window.location.host
 
@@ -29,5 +31,6 @@ export default {
   BASE_URL,
   API_URL,
   PAGE_SIZE,
-  TITLE
+  TITLE,
+  HEALTH_INDICATORS
 }

@@ -1,0 +1,11 @@
+@import "../../utils/index";
+
+@include o(wrap) {
+  @include block--center;
+
+  width: px2rem(356px * 2);
+  border-radius: px2rem(6px * 2);
+  background-color: map-get($colors, c1);
+  margin-top: px2rem(10px * 2);
+  box-shadow: 0 0 10px rgba(map-get($colors, c2), .5);
+}
