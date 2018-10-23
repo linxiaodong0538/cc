@@ -13,6 +13,7 @@ import settings from './modules/settings'
 import relations from './modules/relations'
 import messages from './modules/messages'
 import oldHealthRecords from './modules/oldHealthRecords/'
+import videos from './modules/videos/'
 
 Vue.use(Vuex)
 
@@ -33,6 +34,7 @@ export default new Vuex.Store({
     settings,
     relations,
     messages,
-    oldHealthRecords
+    oldHealthRecords,
+    videos
   }
 })

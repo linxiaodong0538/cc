@@ -29,7 +29,7 @@
         <div class="c-tabs__content o-grid">
           <ul class="c-news-list o-grid__cell">
             <li
-              v-for="(item, index) in [0, 1]"
+              v-for="(videos, index) in OldVideoList.items"
               :key="index"
               class="c-news-list__item">
               <div class="cc-card">
@@ -41,9 +41,9 @@
                     src="http://cyyl-xd.liruan.cn/1.mp4" />
                 </video>
                 <div class="cc-card__body">
-                  <div class="cc-card__title fs8">国际先进养老理念</div>
-                  <div class="cc-card__desc c8 fs4">引进美国先进的养老经验，结合国内养老特点</div>
-                  <div class="cc-card__time c3 fs2">2018-03-17</div>
+                  <div class="cc-card__title fs8">{{videos.title}}</div>
+                  <div class="cc-card__desc c8 fs4">{{videos.description}}</div>
+                  <div class="cc-card__time c3 fs2">{{ videos.created_at | date }}</div>
                 </div>
               </div>
             </li>
@@ -96,6 +96,7 @@
     data () {
       return {
         oldHealthRecordsLists: [],
+        OldVideoList: [],
         cTabs: {
           current: 0
         }
@@ -112,6 +113,7 @@
         .sort((item1, item2) => item1.items.length && item2.items.length
           ? item1.items[0].id - item2.items[0].id
           : -1)
+      this.OldVideoList = await this.getOldVideoList()
     },
     methods: {
       async getOldHealthRecordsList (num) {
@@ -125,6 +127,17 @@
         })
 
         return { ...getListRes, indicator: num }
+      },
+      async getOldVideoList () {
+        const getVideoRes = await this.$store.dispatch('videos/getList', {
+          query: {
+            where: {
+              oldId: '2588'
+            }
+          }
+        })
+
+        return getVideoRes
       },
       initVideos () {
         const videoPlayers = []
