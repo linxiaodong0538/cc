@@ -6,7 +6,7 @@
       v-if="true"
       class="c-tab-bar__item fs5"
       :class="{ 'is-active': isHome }"
-      @click="$router.push('/olds/trends')">
+      @click="$router.push('/olds')">
       陈爸爸
     </div>
     <div
